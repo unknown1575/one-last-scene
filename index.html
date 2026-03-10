@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>One Last Scene</title>
 
@@ -10,19 +11,29 @@ background-image: url('background.jpg');
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
-
-color: gold;
 font-family: Arial;
 text-align: center;
+color: gold;
+margin: 0;
+}
+
+.container{
+background: rgba(0,0,0,0.65);
+padding:40px;
+border-radius:12px;
+width:60%;
+margin:auto;
+margin-top:80px;
 }
 
 table{
 margin:auto;
-width:60%;
+width:80%;
+border-collapse: collapse;
 }
 
 td{
-padding:10px;
+padding:12px;
 border-bottom:1px solid gold;
 }
 
@@ -32,30 +43,51 @@ text-decoration:none;
 font-weight:bold;
 }
 
+a:hover{
+color:gold;
+}
+
 </style>
 
 </head>
 
 <body>
 
+<div class="container">
+
 <h1>🎬 ONE LAST SCENE</h1>
 <h3>Final Roll Call – Class XII</h3>
 
-<p>Click your name to read your message.</p>
+<p>
+Before the final scene begins, mark your presence and
+click your name to read your message.
+</p>
 
 <table>
 
 <tr>
 <td><input type="checkbox"></td>
-<td><a href="student1.html">Student Name</a></td>
+<td><a href="student1.html">Student Name 1</a></td>
 </tr>
 
 <tr>
 <td><input type="checkbox"></td>
-<td><a href="student2.html">Student Name</a></td>
+<td><a href="student2.html">Student Name 2</a></td>
+</tr>
+
+<tr>
+<td><input type="checkbox"></td>
+<td><a href="student3.html">Student Name 3</a></td>
+</tr>
+
+<tr>
+<td><input type="checkbox"></td>
+<td><a href="student4.html">Student Name 4</a></td>
 </tr>
 
 </table>
+
+</div>
 
 </body>
 </html>
