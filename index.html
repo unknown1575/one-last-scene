@@ -26,18 +26,8 @@ background: rgba(0,0,0,0.65);
 padding:40px;
 border-radius:12px;
 width:60%;
-margin-left:120px;
+margin:auto;
 margin-top:80px;
-position: relative;
-overflow: hidden;
-}
-
-/* SCROLL AREA */
-
-.scrollbox{
-max-height:500px;
-overflow-y:auto;
-padding-right:10px;
 }
 
 table{
@@ -77,165 +67,57 @@ Before the final scene begins, mark your presence and
 click your name to read your message.
 </p>
 
-<div class="scrollbox">
-
 <table>
 
 <tr>
-<td><input type="checkbox"></td>
+<td><input type="checkbox" id="cb1" onchange="saveCheck(this)"></td>
 <td><a href="student1.html">Student Name 1</a></td>
 </tr>
 
 <tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 2</a></td>
+<td><input type="checkbox" id="cb2" onchange="saveCheck(this)"></td>
+<td><a href="student2.html">Student Name 2</a></td>
 </tr>
 
 <tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 3</a></td>
+<td><input type="checkbox" id="cb3" onchange="saveCheck(this)"></td>
+<td><a href="student3.html">Student Name 3</a></td>
 </tr>
 
 <tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 4</a></td>
+<td><input type="checkbox" id="cb4" onchange="saveCheck(this)"></td>
+<td><a href="student4.html">Student Name 4</a></td>
 </tr>
 
 <tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 5</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 6</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 7</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 8</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 9</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 10</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 1</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 2</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 3</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 4</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 5</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 6</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 7</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 8</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 9</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 10</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 1</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 2</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 3</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 4</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 5</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 6</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 7</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 8</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 9</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td><a href="#">Student Name 10</a></td>
+<td><input type="checkbox" id="cb5" onchange="saveCheck(this)"></td>
+<td><a href="student5.html">Student Name 5</a></td>
 </tr>
 
 </table>
 
 </div>
 
-</div>
+<script>
+
+function saveCheck(box){
+localStorage.setItem(box.id, box.checked);
+}
+
+window.onload = function(){
+
+let boxes = document.querySelectorAll("input[type=checkbox]");
+
+boxes.forEach(function(box){
+let stored = localStorage.getItem(box.id);
+if(stored === "true"){
+box.checked = true;
+}
+});
+
+}
+
+</script>
 
 </body>
 </html>
