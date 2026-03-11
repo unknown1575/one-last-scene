@@ -2,53 +2,103 @@
 <html>
 
 <head>
+
 <title>One Last Scene</title>
+
+<!-- Google Fonts -->
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Cormorant+Garamond:wght@400;500&family=Quicksand:wght@500&display=swap" rel="stylesheet">
 
 <style>
 
 body{
-background-image: url('1.jpg');
-background-size: 100% 100%;
-background-position: center;
-background-repeat: no-repeat;
-background-attachment: fixed;
-
-font-family: Cenzial;
-text-align: center;
-color: gold;
-
-margin: 0;
-min-height: 100vh;
+background:#8f9f87;
+margin:0;
+display:flex;
+flex-direction:column;
+align-items:center;
 }
 
-.container{
-background: rgba(0,0,0,0.65);
+/* TITLE AREA */
+
+.header-card{
+background:white;
+width:650px;
+padding:30px;
+margin-top:50px;
+border-radius:20px;
+text-align:center;
+}
+
+/* MAIN TITLE */
+
+h1{
+font-family:'Cinzel', serif;
+font-size:44px;
+margin:0;
+}
+
+/* SUBTITLE */
+
+h3{
+font-family:'Cormorant Garamond', serif;
+font-size:24px;
+margin-top:8px;
+}
+
+/* DESCRIPTION */
+
+.desc{
+font-family:'Cormorant Garamond', serif;
+font-size:18px;
+margin-top:10px;
+opacity:0;
+animation:fadeText 2s forwards;
+}
+
+@keyframes fadeText{
+from{opacity:0; transform:translateY(10px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+/* CHECKLIST BOX */
+
+.checklist{
+background:white;
+width:650px;
+margin-top:35px;
 padding:40px;
-border-radius:12px;
-width:60%;
-margin:auto;
-margin-top:80px;
+border-radius:30px;
 }
 
-table{
-margin:auto;
-width:80%;
-border-collapse: collapse;
+/* EACH ROW */
+
+.row{
+display:flex;
+align-items:center;
+border-bottom:2px dashed #888;
+padding:10px 0;
 }
 
-td{
-padding:12px;
-border-bottom:1px solid gold;
+/* CHECKBOX */
+
+.row input{
+width:20px;
+height:20px;
+margin-right:15px;
 }
 
-a{
-color:white;
+/* STUDENT NAME */
+
+.row a{
+font-family:'Quicksand', sans-serif;
+font-size:18px;
 text-decoration:none;
-font-weight:bold;
+color:black;
 }
 
-a:hover{
-color:gold;
+.row a:hover{
+color:#444;
 }
 
 </style>
@@ -57,65 +107,196 @@ color:gold;
 
 <body>
 
-<div class="container">
+<div class="header-card">
 
 <h1>🎬 ONE LAST SCENE</h1>
+
 <h3>Final Roll Call – Class XII</h3>
 
-<p>
-Before the final scene begins, mark your presence and
-click your name to read your message.
+<p class="desc">
+Before the final scene rolls, mark your presence and step into your moment.
+Click your name to read your message.
 </p>
-
-<table>
-
-<tr>
-<td><input type="checkbox" id="cb1" onchange="saveCheck(this)"></td>
-<td><a href="student1.html">Student Name 1</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox" id="cb2" onchange="saveCheck(this)"></td>
-<td><a href="student2.html">Student Name 2</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox" id="cb3" onchange="saveCheck(this)"></td>
-<td><a href="student3.html">Student Name 3</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox" id="cb4" onchange="saveCheck(this)"></td>
-<td><a href="student4.html">Student Name 4</a></td>
-</tr>
-
-<tr>
-<td><input type="checkbox" id="cb5" onchange="saveCheck(this)"></td>
-<td><a href="student5.html">Student Name 5</a></td>
-</tr>
-
-</table>
 
 </div>
 
+
+<div class="checklist">
+
+<div class="row">
+<input type="checkbox" id="s1">
+<a href="student1.html">Student Name 1</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s2">
+<a href="student2.html">Student Name 2</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s3">
+<a href="student3.html">Student Name 3</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s4">
+<a href="student4.html">Student Name 4</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s5">
+<a href="student5.html">Student Name 5</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s1">
+<a href="student1.html">Student Name 1</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s2">
+<a href="student2.html">Student Name 2</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s3">
+<a href="student3.html">Student Name 3</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s4">
+<a href="student4.html">Student Name 4</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s5">
+<a href="student5.html">Student Name 5</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s1">
+<a href="student1.html">Student Name 1</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s2">
+<a href="student2.html">Student Name 2</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s3">
+<a href="student3.html">Student Name 3</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s4">
+<a href="student4.html">Student Name 4</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s5">
+<a href="student5.html">Student Name 5</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s1">
+<a href="student1.html">Student Name 1</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s2">
+<a href="student2.html">Student Name 2</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s3">
+<a href="student3.html">Student Name 3</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s4">
+<a href="student4.html">Student Name 4</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s5">
+<a href="student5.html">Student Name 5</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s1">
+<a href="student1.html">Student Name 1</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s2">
+<a href="student2.html">Student Name 2</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s3">
+<a href="student3.html">Student Name 3</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s4">
+<a href="student4.html">Student Name 4</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s5">
+<a href="student5.html">Student Name 5</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s1">
+<a href="student1.html">Student Name 1</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s2">
+<a href="student2.html">Student Name 2</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s3">
+<a href="student3.html">Student Name 3</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s4">
+<a href="student4.html">Student Name 4</a>
+</div>
+
+<div class="row">
+<input type="checkbox" id="s5">
+<a href="student5.html">Student Name 5</a>
+</div>
+
+</div>
+
+
 <script>
 
-function saveCheck(box){
-localStorage.setItem(box.id, box.checked);
-}
-
-window.onload = function(){
+/* SAVE CHECKBOX STATES */
 
 let boxes = document.querySelectorAll("input[type=checkbox]");
 
-boxes.forEach(function(box){
-let stored = localStorage.getItem(box.id);
-if(stored === "true"){
+boxes.forEach(box => {
+
+let saved = localStorage.getItem(box.id);
+
+if(saved === "true"){
 box.checked = true;
 }
+
+box.addEventListener("change", () => {
+
+localStorage.setItem(box.id, box.checked);
+
 });
 
-}
+});
 
 </script>
 
