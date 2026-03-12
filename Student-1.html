@@ -3,15 +3,20 @@
 <head>
 <title>Farewell Message</title>
 
+<!-- MOBILE VIEWPORT ADDED -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 
 body{
-    background-color:#f6efe6; /* warm cream background */
+    background-color:#f6efe6;
     font-family: Arial, sans-serif;
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100vh;
+    min-height:100vh; /* CHANGED FROM height */
+    margin:0;
+    padding:20px; /* ADDED FOR PHONE SPACING */
 }
 
 /* Fade-in animation */
@@ -27,27 +32,30 @@ body{
 }
 
 .card{
-    background:#3b2f2f; /* warm cocoa brown */
+    background:#3b2f2f;
     padding:40px;
     border-radius:18px;
-    width:420px;
+    width:90%; /* CHANGED FROM 420px */
+    max-width:420px; /* ADDED */
     text-align:center;
     box-shadow:0px 10px 30px rgba(0,0,0,0.2);
     animation:fadeInCard 1.2s ease;
 }
 
 .photo{
-    width:200px;
-    height:240px; /* 1 : 1.2 ratio */
+    width:60%; /* CHANGED FROM 200px */
+    max-width:200px;
+    height:auto;
+    aspect-ratio:1/1.2; /* MAINTAINS 1:1.2 RATIO */
     border-radius:20px;
     object-fit:cover;
-    border:4px solid #e6d5c3; /* soft beige border */
+    border:4px solid #e6d5c3;
 }
 
 .name{
     font-size:28px;
     margin-top:18px;
-    color:#f5ede3; /* soft cream text */
+    color:#f5ede3;
     font-weight:bold;
 }
 
@@ -55,7 +63,7 @@ body{
     margin-top:18px;
     font-size:16px;
     line-height:1.6;
-    color:#e2d3c0; /* warm light text */
+    color:#e2d3c0;
 }
 
 </style>
