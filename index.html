@@ -5,6 +5,9 @@
 
 <title>One Last Scene</title>
 
+<!-- MOBILE VIEWPORT ADDED -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Cormorant+Garamond:wght@400;500&family=Quicksand:wght@500&display=swap" rel="stylesheet">
 
@@ -17,13 +20,15 @@ display:flex;
 flex-direction:column;
 align-items:center;
 color:#f2efe9;
+padding:20px; /* ADDED FOR PHONE SPACING */
 }
 
 /* TITLE AREA */
 
 .header-card{
 background:#111;
-width:650px;
+width:90%; /* CHANGED FROM 650px */
+max-width:650px; /* ADDED */
 padding:30px;
 margin-top:50px;
 border-radius:20px;
@@ -70,7 +75,8 @@ to{opacity:1; transform:translateY(0);}
 
 .checklist{
 background:#111;
-width:650px;
+width:90%; /* CHANGED FROM 650px */
+max-width:650px; /* ADDED */
 margin-top:35px;
 padding:40px;
 border-radius:30px;
